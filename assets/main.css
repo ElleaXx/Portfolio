@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap');
+
+/* @media (min-height: 681px) {
+    header .backgroundImg {
+        z-index: -20;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        filter: brightness(40%)
+    }
+} */
+
+body {
+    height: 5000px;
+}
+
+nav {
+    z-index: 5;
+    font-family: Montserrat;
+    top: 6vh;
+    letter-spacing: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: Montserrat;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    color: white;
+    min-height: 100vh;
+}
+
+header .backgroundImg {
+    z-index: -20;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%)
+}
+
+nav img {
+    height: 2em;
+}
+
+.nav-item {
+    font-size: 13px;
+    margin-left: 2em;
+    transition: all 0.3s ease;
+}
+
+header .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 28%;
+}
+
+header .title .h1 {
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 6.4vh;
+}
+
+header .title .btn {
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 2% 8% 2% 8%;
+    font-size: 1.5vh;
+    color: white;
+    border: 2px solid #ec6424 ;
+    border-color: #ec6424;
+    border-radius: 0;
+    transition: all 0.5s ease;
+}
+
+header .title .btn:hover {
+    background-color: #ec6424;;
+    border-color: #ec6424;
+}
+
+.verticalText {
+    z-index: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    position: absolute;
+    bottom: 3.5em;
+    right: 6em;
+
+    font-family: Montserrat;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.verticalText a {
+        color: #ffffff;
+        transition: all 0.3s ease;
+}
+
+.verticalText a:hover {
+    color: #ec6424;
+}
+
+.line {
+    background-color: #535354;
+    width: 0px;
+    height: auto;
+    border: #535354 solid 1px;
+}
+
+.social {
+    z-index: 45;
+    transform: rotate(360deg);
+    height: 100%;
+    position: absolute;
+    top: 3.5em;
+    right: 4.4em;
+    font-size: 20px;
+}
+
+.social a {
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.social a:hover {
+    color: #ec6424;
+}
+
+
+
+
+main .header::before {
+    padding-right: 20px;
+    position: absolute;
+    content: "01. ----- ";
+}
