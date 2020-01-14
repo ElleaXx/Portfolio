@@ -376,6 +376,13 @@ main .header::before {
     #icon8{
         border-left: #535354 1px solid;
     }
+    .footerInfo::before {
+        content: "";
+        border-top: solid 1px #2e2e2e;
+        height: 20px;
+        width: 20.4em;
+        position: absolute;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -403,7 +410,16 @@ main .header::before {
     #icon7{
         border-right: #535354 1px solid;
     }
-    #icon8{}
+    #icon8{
+
+    }
+    .footerInfo .row::before {
+        content: "";
+        border-top: solid 1px #2e2e2e;
+        height: 20px;
+        width: 100%;
+        position: absolute;
+    }
 }
 
 @media (max-width: 575px) {
@@ -428,7 +444,16 @@ main .header::before {
     #icon7{
         border-bottom: #535354 1px solid;
     }
-    #icon8{}
+    #icon8{
+
+    }
+    .footerInfo .row::before {
+        content: "";
+        border-top: solid 1px #2e2e2e;
+        height: 20px;
+        width: 100%;
+        position: absolute;
+    }
 }
 
 #merit {
@@ -488,4 +513,74 @@ main .header::before {
     font-size: 1.4rem;
     padding-bottom: 0;
     line-height: 1.5;
+}
+
+footer {
+    background-color: #151515;
+    padding-bottom: 7rem;
+    border-bottom: solid #2e2e2e 1px;
+}
+
+footer .title {
+
+    left: 0;
+    right: 0;
+    top: 28%;
+}
+
+footer .title .h1 {
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 6.4vh;
+}
+
+footer .title .btn {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid #ec6424 ;
+    border-color: #ec6424;
+    border-radius: 0;
+    transition: all 0.5s ease;
+}
+
+footer .title .btn:hover {
+    background-color: #ec6424;
+    border-color: #ec6424;
+}
+
+/* .footerInfo::before {
+    content: "";
+    border-top: solid 1px #8c8c8c;
+    height: 20px;
+    width: 17%;
+    position: absolute;
+} */
+
+
+#footerBtn {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: white;
+    border: 2px solid #ec6424 ;
+    border-color: #ec6424;
+    border-radius: 0;
+    transition: all 0.5s ease;
+}
+
+/* .inputGroup::before {
+    content: "fdfdg";
+} */
+
+
+#button-addon2 {
+    background-color: #ec6424;
+    border-color: #ec6424;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-size: 1rem;
 }
