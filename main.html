@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
 </head>
-<body>
+<body data-spy="scroll" data-target="navbar" data-offset="50">
     <header>
         <img src="https://colorlib.com/preview/theme/stellar/images/stats-bg.jpg" class="backgroundImg">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="navbar-example2">
             <div class="container p-0" style="max-width: 1400px;">
                 <a class="navbar-brand" href="#">
                     <img src="assets\img\logo.svg" class="pr-lg-5 pr-md-5 pr-sm-5 pr-0">
@@ -24,11 +24,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav pt-2">
-                        <a class="nav-item nav-link active" href="#">HOME <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">ABOUT</a>
-                        <a class="nav-item nav-link" href="#">SERVICES</a>
-                        <a class="nav-item nav-link" href="#">WORKS</a>
-                        <a class="nav-item nav-link" href="#">CONTACT</a>
+                        <a class="nav-item nav-link active" href="#list-item-0">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#list-item-1">ABOUT</a>
+                        <a class="nav-item nav-link" href="#textInfoBackground">SERVICES</a>
+                        <a class="nav-item nav-link" href="#list-item-3">WORKS</a>
+                        <a class="nav-item nav-link" href="#selectedClients">CONTACT</a>
+                        <a class="nav-item nav-link" href="#textInfodown">MERIT</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +49,7 @@
         </div> 
         <div class="verticalText d-none d-xl-block">
             <div class="row d-flex align-items-center">
-                <a href="#">SCROLL</a> 
+                <a href="#list-item-1">SCROLL</a> 
                 <div class="line mt-4" style="height: 13%;"></div>
             </div>
         </div>
@@ -60,8 +61,8 @@
             <div><a href="#" data-toggle="tooltip" data-placement="left" title="Dribbble"><i class="font fab fa-dribbble"></i></a></div>
         </div>
     </header>
-    <main>
-        <div class="textInfo">
+    <main data-target="#navbar-example2" data-offset="0">
+        <div class="textInfo" id="list-item-1">
             <div class="container"style="max-width: 1400px;">
                 <h3 data-num="01" class="subhead">WHO WE ARE</h3>
                 <div class="container">
@@ -149,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <div class="textInfo">
+        <div class="textInfo" id="list-item-3">
             <div class="container"style="max-width: 1400px;">
                 <h3 data-num="03" class="subhead">RECENT WORKS</h3>
                 <div class="container">
@@ -364,6 +365,20 @@
                 contain: true
         });
     </script>
+
+<script>
+    $(document).ready(function(e) {
+
+        $('#navbar-example2').scrollSpy()
+        $('#navbar-example2 ul li a').bind('click', function(e) {
+            e.preventDefault();
+            target = this.hash;
+            console.log(target);
+            $.scrollTo(target, 1000);
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
