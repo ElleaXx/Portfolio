@@ -31,6 +31,45 @@
     }
 }
 
+@media (max-width: 414px) {
+    .subheadMedia::before {
+        content: none;
+        padding-right: 6rem;
+        font-weight: 700;
+    }
+    .subheadMedia::after {
+        content: none;
+        display: block;
+        background-color: #F26522;
+        height: 1px;
+        margin-top: -1px;
+        width: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 4rem;
+    }
+    
+}
+
+@media (min-width: 415px) {
+    .subheadMedia::before {
+        content: attr(data-num) ".";
+        padding-right: 6rem;
+        font-weight: 700;
+    }
+    .subheadMedia::after {
+        content: "";
+        display: block;
+        background-color: #F26522;
+        height: 1px;
+        margin-top: -1px;
+        width: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 4rem;
+    }
+}
+
 body {
     
 }
@@ -211,7 +250,7 @@ main .header::before {
     color: #F26522;
     position: relative;
 }
-.subheadMedia::before {
+/* .subheadMedia::before {
     content: attr(data-num) ".";
     padding-right: 6rem;
     font-weight: 700;
@@ -226,7 +265,7 @@ main .header::before {
     position: absolute;
     top: 50%;
     left: 4rem;
-}
+} */
 
 
 
@@ -518,7 +557,7 @@ main .header::before {
 footer {
     background-color: #151515;
     padding-bottom: 7rem;
-    border-bottom: solid #2e2e2e 1px;
+    /* border-bottom: solid #2e2e2e 1px; */
 }
 
 footer .title {
@@ -583,4 +622,56 @@ footer .title .btn:hover {
     letter-spacing: 2px;
     border-radius: 0;
     font-size: 1rem;
+}
+
+.footerScroll {
+    margin-top: 12rem;
+    padding-bottom: 7rem;
+    border-top: #2e2e2e 1px solid;
+}
+
+.square {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background: black;
+    transition: all 0.9s ease;
+}
+
+.square:hover {
+    background: #ec6424;
+    transition: all 0.3s ease;
+}
+
+.square::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 19rem;
+    background-color: #2e2e2e;
+    position: absolute;
+    top: -10.5rem;
+    left: 100%;
+}
+
+.square::after {
+    content: "back to top";
+    display: inline-block;
+    width: 12rem;
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #2e2e2e;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    position: absolute;
+    left: 3.4rem;
+    top: -3rem;
 }
