@@ -26,12 +26,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav pt-2">
-                        <a class="nav-item nav-link active" href="#list-item-0">HOME <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#list-item-1">ABOUT</a>
-                        <a class="nav-item nav-link" href="#textInfoBackground">SERVICES</a>
-                        <a class="nav-item nav-link" href="#list-item-3">WORKS</a>
-                        <a class="nav-item nav-link" href="#selectedClients">CONTACT</a>
-                        <a class="nav-item nav-link" href="#textInfodown">MERIT</a>
+                        <a class="nav-item nav-link active" onclick="scrollToElement('navbar-example2')">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('list-item-1')">ABOUT</a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('textInfoBackground')">SERVICES</a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('list-item-3')">WORKS</a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('selectedClients')">CONTACT</a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('textInfodown')">MERIT</a>
                     </div>
                 </div>
             </div>
@@ -374,7 +374,9 @@
         //                 document.getElementById("navbar-example2").className.replace( /(?:^|\s)fixed-top(?!\S)/g , '' )
         //         }
         //     }
-
+        function scrollToElement(element) {
+            document.getElementById(element).scrollIntoView({behavior: "smooth", block: "start"})
+        }
 
 </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
