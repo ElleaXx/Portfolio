@@ -303,7 +303,7 @@ main .header::before {
 
 #textInfoBackground {
     background-image: url(https://royalrankings.ae/wp-content/uploads/2016/11/Website-Design-Background-1.jpg);
-    
+    background-attachment: fixed;
     background-color: #151515;
     background-repeat: no-repeat;
     background-position: center center;
@@ -498,6 +498,7 @@ main .header::before {
 #merit {
     position: relative;
     background-image: url(https://colorlib.com/preview/theme/stellar/images/stats-bg.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 80%;
