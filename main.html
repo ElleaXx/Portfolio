@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
 </head>
 <body >
-    <header>
+    <header id="headerScroll">
         <img src="https://colorlib.com/preview/theme/stellar/images/stats-bg.jpg" class="backgroundImg">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="navbar-example2">
             <div class="container p-0" style="max-width: 1400px;">
@@ -26,7 +26,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav pt-2">
-                        <a class="nav-item nav-link active" onclick="scrollToElement('navbar-example2')">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" onclick="scrollToElement('headerScroll')">HOME <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" onclick="scrollToElement('list-item-1')">ABOUT</a>
                         <a class="nav-item nav-link" onclick="scrollToElement('textInfoBackground')">SERVICES</a>
                         <a class="nav-item nav-link" onclick="scrollToElement('list-item-3')">WORKS</a>
@@ -44,14 +44,14 @@
                         ideas into digital reality
                     </p>
                     <div class="col-12 p-0">
-                    <button type="button" class="btn btn-outline-danger col-lg-5 col-md-4 col-6">MORE ABOUT US</button>
+                    <button type="button" class="btn btn-outline-danger col-lg-5 col-md-4 col-6" onclick="scrollToElement('list-item-1')">MORE ABOUT US</button>
                     </div>
                 </div>
             </div>
         </div> 
         <div class="verticalText d-none d-xl-block">
             <div class="row d-flex align-items-center">
-                <a href="#list-item-1">SCROLL</a> 
+                <a onclick="scrollToElement('list-item-1')">SCROLL</a> 
                 <div class="line mt-4" style="height: 13%;"></div>
             </div>
         </div>
@@ -331,7 +331,7 @@
         <div class="footerInfo container" style="max-width: 1400px;">
             <div class="row">
                 <div class="title d-flex justify-content-center justify-content-lg-start col-lg-4 col-12">
-                    <button type="button" class="btn btn-outline-danger col-lg-9 col-md-4 col-6 mt-5 pt-4 pb-4">LET'S TALK</button>
+                    <button type="button" class="btn btn-outline-danger col-lg-9 col-md-4 col-6 mt-5 pt-4 pb-4" onclick="scrollToElement('headerScroll')">LET'S TALK</button>
                 </div>
                 <div class="inputGroup d-flex  justify-content-end col-lg-8 col-12">
                     <div class="input-group col-lg-11 col-12 mt-5 pl-lg-4 pr-0">
@@ -347,8 +347,8 @@
         </div> 
         <div class="footerScroll ">
             <div class="container d-flex justify-content-lg-end justify-content-center" style="max-width: 110rem;">
-            <a href="#">
-                <div class="square d-flex align-items-center justify-content-center">
+            <a onclick="scrollToElement('headerScroll')">
+                <div class="square d-flex align-items-center justify-content-center" >
                     <i class="fas fa-arrow-up" style="color: white;"></i>
                 </div>
             </a>
@@ -363,17 +363,19 @@
         //         contain: true
         // });
 
-        // window.onscroll = function() {scrollFunction()};
-        // function scrollFunction() {
-        //         if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-        //             document.getElementById("navbar-example2").className += " fixed-top";
-        //             document.getElementById("navbar-example2").className += " bg-dark";
-        //         }
-        //         else if (document.body.scrollTop < 1200 && document.body.scrollTop > 0 || document.documentElement.scrollTop < 1200 && document.documentElement.scrollTop > 0 ) {
-        //             document.getElementById("navbar-example2").className =
-        //                 document.getElementById("navbar-example2").className.replace( /(?:^|\s)fixed-top(?!\S)/g , '' )
-        //         }
-        //     }
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+                if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+                    document.getElementById("navbar-example2").className += " fixed-top";
+                    document.getElementById("navbar-example2").className = document.getElementById("navbar-example2").className.replace( /(?:^|\s)bg-transparent(?!\S)/g , '' )
+                    document.getElementById("navbar-example2").className += " bg-dark";
+                }
+                else if (document.body.scrollTop < 1200 && document.body.scrollTop > 0 || document.documentElement.scrollTop < 1200 && document.documentElement.scrollTop > 0 ) {
+                    document.getElementById("navbar-example2").className = document.getElementById("navbar-example2").className.replace( /(?:^|\s)fixed-top(?!\S)/g , '' )
+                    document.getElementById("navbar-example2").className += " bg-transparent";
+                    document.getElementById("navbar").style = "transition: all 0.9s ease";
+                }
+            }
         function scrollToElement(element) {
             document.getElementById(element).scrollIntoView({behavior: "smooth", block: "start"})
         }
