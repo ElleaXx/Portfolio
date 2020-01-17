@@ -409,8 +409,6 @@ main .header::before {
     background-position: center center;
     background-size: contain;
     background-image: url(https://colorlib.com/preview/theme/stellar/images/icons/icon-quote.svg);
-    position: ;
-
 }
 
 
@@ -448,7 +446,7 @@ main .header::before {
 }
 
 #selectedClients .title {
-    padding-bottom: ;
+
 }
 
 

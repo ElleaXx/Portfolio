@@ -21,7 +21,7 @@
         <img src="https://colorlib.com/preview/theme/stellar/images/stats-bg.jpg" class="backgroundImg">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="navbar-example2">
             <div class="container p-0" style="max-width: 1400px;">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand pl-lg-2" href="#">
                     <img src="assets\img\logo.svg" class="pr-lg-5 pr-md-5 pr-sm-5 pr-0">
                 </a>
                 <button class="hambergerIcon navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -366,16 +366,17 @@
         //         contain: true
         // });
 
+        // Скролл
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
                 if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-                    document.getElementById("navbar-example2").className += " fixed-top";
+                    document.getElementById("navbar-example2").classList.add("fixed-top");
                     document.getElementById("navbar-example2").className = document.getElementById("navbar-example2").className.replace( /(?:^|\s)bg-transparent(?!\S)/g , '' )
-                    document.getElementById("navbar-example2").className += " bg-dark";
+                    document.getElementById("navbar-example2").style.backgroundColor = "#151515";
                 }
                 else if (document.body.scrollTop < 1200 && document.body.scrollTop > 0 || document.documentElement.scrollTop < 1200 && document.documentElement.scrollTop > 0 ) {
                     document.getElementById("navbar-example2").className = document.getElementById("navbar-example2").className.replace( /(?:^|\s)fixed-top(?!\S)/g , '' )
-                    document.getElementById("navbar-example2").className += " bg-transparent";
+                    document.getElementById("navbar-example2").classList.add("bg-transparent");
                     document.getElementById("navbar").style = "transition: all 0.9s ease";
                 }
             }
@@ -383,10 +384,10 @@
             document.getElementById(element).scrollIntoView({behavior: "smooth", block: "start"})
         }
 
-// прелоадер
-$(window).on('load', function () {
-    $('.preloader').addClass("preloader-remove");     
-});
+        // прелоадер
+        $(window).on('load', function () {
+            $('.preloader').addClass("preloader-remove");     
+        });
 
 
 </script>
