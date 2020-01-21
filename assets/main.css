@@ -340,7 +340,7 @@ main .header::before {
 }
 
 .textInfo h2 {
-    font-size: 3.5rem;
+    font-size: 5vh;
     padding-top: 6rem;
     padding-bottom: 2rem;
     line-height: 1.4;
