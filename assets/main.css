@@ -739,3 +739,18 @@ footer .title .btn:hover {
     left: 3.4rem;
     top: -3rem;
 }
+
+.collapse.show {
+    position: relative;
+    background-color: #151515;
+    /* box-shadow: 0 0 5px 2px #151515; */
+
+}
+
+.collapse.show::before {
+    content: "";
+    position: absolute;
+    border-top: white solid 1px;
+    top: 0;
+    width: 100%;
+}
