@@ -340,7 +340,7 @@ main .header::before {
 }
 
 .textInfo h2 {
-    font-size: 5vh;
+    font-size: 1.9rem;
     padding-top: 6rem;
     padding-bottom: 2rem;
     line-height: 1.4;
@@ -742,15 +742,15 @@ footer .title .btn:hover {
 
 .collapse.show {
     position: relative;
-    background-color: #151515;
+    /* background-color: #151515; */
     /* box-shadow: 0 0 5px 2px #151515; */
 
 }
 
-.collapse.show::before {
+/* .collapse.show::before {
     content: "";
     position: absolute;
     border-top: white solid 1px;
     top: 0;
     width: 100%;
-}
+} */
